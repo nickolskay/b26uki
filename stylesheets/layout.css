@@ -1,8 +1,11 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "PT Root UI";
 }
 h1,
 h2,
@@ -64,4 +67,139 @@ hr {
 }
 hr {
   border-bottom: none;
+}
+li {
+  margin: 20px 0;
+  margin-left: 20px;
+}
+ul li {
+  list-style-type: square;
+}
+ol li {
+  list-style-type: decimal;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+/* стили для бок меню */
+
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  opacity: 0.2;
+  transition: opacity ease 0.6s;
+}
+.sidebar:hover {
+  opacity: 1;
+}
+.sidebar ul {
+  width: 100%;
+  margin: 0;
+  margin-left: 10px;
+}
+.sidebar li {
+  list-style-type: none;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.8;
+}
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  transition: text-decoration ease 0.4s;
+}
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* стили верх меню */
+.menubar {
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  position: fixed;
+  top: 0;
+}
+.menubar a {
+  text-decoration: none;
+  color: #888;
+  transition: color ease 0.6s;
+}
+.menubar a:hover {
+  color: black;
+}
+/* стили about.html */
+.about::before {
+  width: 100%;
+  height: 3120px;
+  position: absolute;
+  top: 0;
+  background-image: url("../images/images/1440.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  opacity: 0.2;
+}
+.about h2,
+.about p {
+  width: 100%;
+}
+.about h2 {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+.about p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+.section-1,
+.section-2,
+.section-3 {
+  display: flex;
+}
+
+.section-1 {
+  margin-top: 120px;
+}
+.section-1 div,
+.section-2 div,
+.section-3 div {
+  width: 50%;
+  overflow-x: hidden;
+}
+.section-1 div:nth-of-type(1),
+.section-3 div:nth-of-type(1) {
+  padding-left: 100px;
+}
+.section-1 img,
+.section-3 img {
+  width: 950px;
+  margin-left: 36px;
+}
+.section-2 img {
+  width: 590px;
+}
+.section-2 div:nth-of-type(2) {
+  padding: 54px 40px 0px;
+}
+.section-3 {
+  margin-top: 100px;
+  border-bottom: 1px solid #eee;
 }
